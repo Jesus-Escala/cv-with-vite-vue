@@ -1,0 +1,610 @@
+.lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lines .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  transform: rotate(45deg);
+  top: -20%;
+  left: 50%;
+}
+
+.lines .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  animation: run 20s 3s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+@media (max-width: 2050px) {
+  .lines .line:nth-child(1) {
+    margin-left: -60%;
+  }
+
+  .lines .line:nth-child(1)::after {
+    animation-delay: 8s;
+  }
+  .lines .line:nth-child(2) {
+    margin-left: -35%;
+  }
+
+  .lines .line:nth-child(2)::after {
+    animation-delay: 12s;
+  }
+
+  .lines .line:nth-child(3) {
+    margin-left: -10%;
+  }
+  .lines .line:nth-child(3)::after {
+    animation-delay: 4s;
+  }
+
+  .lines .line:nth-child(4) {
+    margin-left: 15%;
+  }
+
+  .lines .line:nth-child(4)::after {
+    animation-delay: 17s;
+  }
+
+  .lines .line:nth-child(5) {
+    margin-left: 40%;
+  }
+
+  .lines .line:nth-child(5)::after {
+    animation-delay: 9s;
+  }
+}
+@media (max-width: 1200px) {
+  .lines .line:nth-child(1) {
+    margin-left: -80%;
+  }
+
+  .lines .line:nth-child(1)::after {
+    animation-delay: 8s;
+  }
+  .lines .line:nth-child(2) {
+    margin-left: -50%;
+  }
+  .lines .line:nth-child(2)::after {
+    animation-delay: 12s;
+  }
+
+  .lines .line:nth-child(3) {
+    margin-left: -10%;
+  }
+  .lines .line:nth-child(3)::after {
+    animation-delay: 4s;
+  }
+
+  .lines .line:nth-child(4) {
+    margin-left: 30%;
+  }
+
+  .lines .line:nth-child(4)::after {
+    animation-delay: 17s;
+  }
+
+  .lines .line:nth-child(5) {
+    margin-left: 65%;
+  }
+
+  .lines .line:nth-child(5)::after {
+    animation-delay: 9s;
+  }
+}
+
+@media (max-width: 900px) {
+  .lines .line:nth-child(1) {
+    margin-left: -90%;
+  }
+
+  .lines .line:nth-child(1)::after {
+    animation-delay: 8s;
+  }
+
+  .lines .line:nth-child(2) {
+    margin-left: -60%;
+  }
+  .lines .line:nth-child(2)::after {
+    animation-delay: 12s;
+  }
+
+  .lines .line:nth-child(3) {
+    margin-left: -20%;
+  }
+  .lines .line:nth-child(3)::after {
+    animation-delay: 4s;
+  }
+
+  .lines .line:nth-child(4) {
+    margin-left: 20%;
+  }
+
+  .lines .line:nth-child(4)::after {
+    animation-delay: 17s;
+  }
+
+  .lines .line:nth-child(5) {
+    margin-left: 55%;
+  }
+
+  .lines .line:nth-child(5)::after {
+    animation-delay: 9s;
+  }
+}
+
+@media (max-width: 650px) {
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    transform: rotate(40deg);
+    top: -20%;
+    left: 50%;
+  }
+  .lines .line:nth-child(1) {
+    margin-left: -110%;
+  }
+
+  .lines .line:nth-child(1)::after {
+    animation-delay: 8s;
+  }
+  .lines .line:nth-child(2) {
+    margin-left: -70%;
+  }
+
+  .lines .line:nth-child(2)::after {
+    animation-delay: 12s;
+  }
+
+  .lines .line:nth-child(3) {
+    margin-left: -30%;
+  }
+  .lines .line:nth-child(3)::after {
+    animation-delay: 4s;
+  }
+
+  .lines .line:nth-child(4) {
+    margin-left: 10%;
+  }
+
+  .lines .line:nth-child(4)::after {
+    animation-delay: 17s;
+  }
+
+  .lines .line:nth-child(5) {
+    margin-left: 50%;
+  }
+
+  .lines .line:nth-child(5)::after {
+    animation-delay: 9s;
+  }
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+.pokemon-initial-container {
+  position: fixed;
+  right: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+@keyframes move-x-pokemon-initial {
+  0% {
+    margin-right: -5vw;
+  }
+  1% {
+    margin-right: 1vw;
+  }
+  2% {
+    margin-right: 2vw;
+  }
+  3% {
+    margin-right: 3vw;
+  }
+  4% {
+    margin-right: 4vw;
+  }
+  5% {
+    margin-right: 5vw;
+  }
+  6% {
+    margin-right: 6vw;
+  }
+  7% {
+    margin-right: 7vw;
+  }
+  8% {
+    margin-right: 8vw;
+  }
+  9% {
+    margin-right: 9vw;
+  }
+  10% {
+    margin-right: 10vw;
+  }
+  11% {
+    margin-right: 11vw;
+  }
+  12% {
+    margin-right: 12vw;
+  }
+  13% {
+    margin-right: 13vw;
+  }
+  14% {
+    margin-right: 14vw;
+  }
+  15% {
+    margin-right: 15vw;
+  }
+  16% {
+    margin-right: 16vw;
+  }
+  17% {
+    margin-right: 17vw;
+  }
+  18% {
+    margin-right: 18vw;
+  }
+  19% {
+    margin-right: 19vw;
+  }
+  20% {
+    margin-right: 20vw;
+  }
+  21% {
+    margin-right: 21vw;
+  }
+  22% {
+    margin-right: 22vw;
+  }
+  23% {
+    margin-right: 23vw;
+  }
+  24% {
+    margin-right: 24vw;
+  }
+  25% {
+    margin-right: 25vw;
+  }
+  26% {
+    margin-right: 26vw;
+  }
+  27% {
+    margin-right: 27vw;
+  }
+  28% {
+    margin-right: 28vw;
+  }
+  29% {
+    margin-right: 29vw;
+  }
+  30% {
+    margin-right: 30vw;
+  }
+  31% {
+    margin-right: 31vw;
+  }
+  32% {
+    margin-right: 32vw;
+  }
+  33% {
+    margin-right: 33vw;
+  }
+  34% {
+    margin-right: 34vw;
+  }
+  35% {
+    margin-right: 35vw;
+  }
+  36% {
+    margin-right: 36vw;
+  }
+  37% {
+    margin-right: 37vw;
+  }
+  38% {
+    margin-right: 38vw;
+  }
+  39% {
+    margin-right: 39vw;
+  }
+  40% {
+    margin-right: 40vw;
+  }
+  41% {
+    margin-right: 41vw;
+  }
+  42% {
+    margin-right: 42vw;
+  }
+  43% {
+    margin-right: 43vw;
+  }
+  44% {
+    margin-right: 44vw;
+  }
+  45% {
+    margin-right: 45vw;
+  }
+  46% {
+    margin-right: 46vw;
+  }
+  47% {
+    margin-right: 47vw;
+  }
+  48% {
+    margin-right: 48vw;
+  }
+  49% {
+    margin-right: 49vw;
+  }
+  50% {
+    margin-right: 50vw;
+  }
+  51% {
+    margin-right: 51vw;
+  }
+  52% {
+    margin-right: 52vw;
+  }
+  53% {
+    margin-right: 53vw;
+  }
+  54% {
+    margin-right: 54vw;
+  }
+  55% {
+    margin-right: 55vw;
+  }
+  56% {
+    margin-right: 56vw;
+  }
+  57% {
+    margin-right: 57vw;
+  }
+  58% {
+    margin-right: 58vw;
+  }
+  59% {
+    margin-right: 59vw;
+  }
+  60% {
+    margin-right: 60vw;
+  }
+  61% {
+    margin-right: 61vw;
+  }
+  62% {
+    margin-right: 62vw;
+  }
+  63% {
+    margin-right: 63vw;
+  }
+  64% {
+    margin-right: 64vw;
+  }
+  65% {
+    margin-right: 65vw;
+  }
+  66% {
+    margin-right: 66vw;
+  }
+  67% {
+    margin-right: 67vw;
+  }
+  68% {
+    margin-right: 68vw;
+  }
+  69% {
+    margin-right: 69vw;
+  }
+  70% {
+    margin-right: 70vw;
+  }
+  71% {
+    margin-right: 71vw;
+  }
+  72% {
+    margin-right: 72vw;
+  }
+  73% {
+    margin-right: 73vw;
+  }
+  74% {
+    margin-right: 74vw;
+  }
+  75% {
+    margin-right: 75vw;
+  }
+  76% {
+    margin-right: 76vw;
+  }
+  77% {
+    margin-right: 77vw;
+  }
+  78% {
+    margin-right: 78vw;
+  }
+  79% {
+    margin-right: 79vw;
+  }
+  80% {
+    margin-right: 80vw;
+  }
+  81% {
+    margin-right: 81vw;
+  }
+  82% {
+    margin-right: 82vw;
+  }
+  83% {
+    margin-right: 83vw;
+  }
+  84% {
+    margin-right: 84vw;
+  }
+  85% {
+    margin-right: 85vw;
+  }
+  86% {
+    margin-right: 86vw;
+  }
+  87% {
+    margin-right: 87vw;
+  }
+  88% {
+    margin-right: 88vw;
+  }
+  89% {
+    margin-right: 89vw;
+  }
+  90% {
+    margin-right: 90vw;
+  }
+  91% {
+    margin-right: 91vw;
+  }
+  92% {
+    margin-right: 92vw;
+  }
+  93% {
+    margin-right: 93vw;
+  }
+  94% {
+    margin-right: 94vw;
+  }
+  95% {
+    margin-right: 95vw;
+  }
+  96% {
+    margin-right: 96vw;
+  }
+  97% {
+    margin-right: 97vw;
+  }
+  98% {
+    margin-right: 98vw;
+  }
+  99% {
+    margin-right: 99vw;
+  }
+  100% {
+    margin-right: 100vw;
+  }
+}
+
+.animate-move-x-pokemon-initial {
+  animation: move-x-pokemon-initial 60s ease-in-out infinite;
+}
+
+.pokemon-legendary-container {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  margin-left: -10vw;
+}
+@keyframes move-x-pokemon-legendary {
+  0% {
+    margin-right: 5vw;
+    rotate: 5deg;
+    opacity: 1;
+    bottom: 50%;
+  }
+  10% {
+    margin-right: 10vw;
+    rotate: -5deg;
+    opacity: 1;
+    bottom: 50%;
+  }
+  20% {
+    margin-right: 20vw;
+    rotate: 5deg;
+    opacity: 1;
+    bottom: 55%;
+  }
+  30% {
+    margin-right: 30vw;
+    rotate: -5deg;
+    opacity: 1;
+    bottom: 55%;
+  }
+  40% {
+    margin-right: 40vw;
+    rotate: 5deg;
+    opacity: 1;
+    bottom: 60%;
+  }
+  50% {
+    margin-right: 50vw;
+    rotate: -5deg;
+    opacity: 0.6;
+    bottom: 65%;
+  }
+  60% {
+    margin-right: 60vw;
+    rotate: 5deg;
+
+    opacity: 0.7;
+
+    bottom: 70%;
+  }
+  70% {
+    margin-right: 70vw;
+    rotate: -5deg;
+    opacity: 0.8;
+    bottom: 75%;
+  }
+  80% {
+    margin-right: 80vw;
+    rotate: 5deg;
+    opacity: 0.9;
+    bottom: 80%;
+  }
+  90% {
+    margin-left: 90vw;
+    rotate: -5deg;
+    opacity: 0;
+    bottom: 85%;
+  }
+  100% {
+    margin-right: 100vw;
+    rotate: 5deg;
+    opacity: 0;
+  }
+}
+
+.animate-move-x-pokemon-legendary {
+  animation: move-x-pokemon-legendary 15s linear forwards;
+  animation-fill-mode: forwards;
+}
